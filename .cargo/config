@@ -1,0 +1,7 @@
+# Set the default target to be x86_64.
+[build]
+target = "target_defs/x86_64-scos.json"
+
+# Allow us to use cargo run instead of build + launch QEMU
+[target.'cfg(target_os = "none")']
+runner = "bootimage runner"
